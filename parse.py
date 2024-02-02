@@ -11,7 +11,7 @@ from decimal import Decimal
 from functools import partial
 
 
-__version__ = "1.20.0"
+__version__ = "1.20.1"
 __all__ = ["parse", "search", "findall", "with_pattern"]
 
 log = logging.getLogger(__name__)
@@ -307,7 +307,7 @@ dt_format_to_regex = {
     "%p": "(?:AM|PM)",
     "%M": "[0-9]{2}",
     "%S": "[0-9]{2}",
-    "%f": "[0-9]{6}",
+    "%f": "[0-9]{1,6}",
     "%z": "[+|-][0-9]{2}(:?[0-9]{2})?(:?[0-9]{2})?",
     # "%Z": punt
     "%j": "[0-9]{1,3}",
